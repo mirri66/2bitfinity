@@ -42,7 +42,8 @@ GameManager.prototype.setup = function () {
   this.grid.addStartTiles();
 
   this.ai           = new AI(this.grid);
-
+  
+  this.highestTile = 0;
   this.score        = 0;
   this.over         = false;
   this.won          = false;
@@ -71,7 +72,9 @@ GameManager.prototype.move = function(direction) {
       this.grid.computerMove();
     }
   } else {
-    this.won = true;
+    // You can never win?!
+    //this.won = true;
+    this.won = false;
   }
 
   //console.log(this.grid.valueSum());

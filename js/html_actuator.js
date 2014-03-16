@@ -1,6 +1,7 @@
 function HTMLActuator() {
   this.tileContainer    = document.getElementsByClassName("tile-container")[0];
   this.scoreContainer   = document.getElementsByClassName("score-container")[0];
+  this.maxContainer   = document.getElementsByClassName("max-container")[0];
   this.messageContainer = document.getElementsByClassName("game-message")[0];
   this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
 
@@ -22,6 +23,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
     });
 
     self.updateScore(metadata.score);
+    self.updateMax(Math.pow(2,grid.maxValue()));
 
     if (metadata.over) self.message(false); // You lose
     if (metadata.won) self.message(true); // You win!
@@ -103,6 +105,26 @@ HTMLActuator.prototype.updateScore = function (score) {
 
     this.scoreContainer.appendChild(addition);
   }
+};
+
+
+// not done
+HTMLActuator.prototype.updateMax = function (score) {
+  this.clearContainer(this.maxContainer);
+
+  var difference = score - this.score;
+  this.score = score;
+
+  this.maxContainer.textContent = this.score;
+/*
+  if (difference > 0) {
+    var addition = document.createElement("div");
+    addition.classList.add("max-addition");
+    addition.textContent = "+" + difference;
+
+    this.maxContainer.appendChild(addition);
+  }
+  */
 };
 
 HTMLActuator.prototype.message = function (won) {

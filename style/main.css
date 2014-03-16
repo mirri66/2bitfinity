@@ -49,6 +49,68 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 
+.ai-button{
+  position: relative;
+  display: inline-block;
+  background: #bbada0;
+  padding: 15px 25px;
+  font-size: 10px;
+  line-height: 13px;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center; 
+  font-size: 1em;
+  color: #eee4da; 
+  display: none;
+}
+
+.score-container, .max-container {
+  position: relative;
+  display: inline-block;
+  background: #bbada0;
+  padding: 15px 25px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center; }
+  .score-container:after, .max-container:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da; }
+  .score-container .score-addition, .max-container .score-addition {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both; }
+
+.score-container:after {
+  content: "Score"; }
+
+.max-container:after {
+  content: "Max"; }
+
+/*
 .score-container {
   position: relative;
   float: right;
@@ -85,6 +147,7 @@ h1.title {
     -moz-animation: move-up 600ms ease-in;
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both; }
+    */
 
 p {
   margin-top: 0;
@@ -353,6 +416,42 @@ hr {
     font-size: 35px; }
     @media screen and (max-width: 480px) {
       .tile.tile-2048 {
+        font-size: 15px; } }
+
+  .tile.tile-4096 {
+    color: #f9f6f2;
+    background: #edc44f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 35px; }
+    @media screen and (max-width: 480px) {
+      .tile.tile-4096 {
+        font-size: 15px; } }
+
+  .tile.tile-8192 {
+    color: #f9f6f2;
+    background: #edc77f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 35px; }
+    @media screen and (max-width: 480px) {
+      .tile.tile-8192 {
+        font-size: 15px; } }
+
+  .tile.tile-16384 {
+    color: #f9f6f2;
+    background: #edc1a6;
+    box-shadow: 0 0 30px 10px rgba(266, 193, 166, 0.8556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 35px; }
+    @media screen and (max-width: 480px) {
+      .tile.tile-16384 {
+        font-size: 15px; } }
+
+  .tile.tile-32768 {
+    color: #f9f6f2;
+    background: #f2a599;
+    box-shadow: 0 0 30px 10px rgba(277, 190, 166, 0.85556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    font-size: 35px; }
+    @media screen and (max-width: 480px) {
+      .tile.tile-32768 {
         font-size: 15px; } }
 
 @-webkit-keyframes appear {

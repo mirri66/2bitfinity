@@ -121,7 +121,7 @@ Grid.prototype.addStartTiles = function () {
 Grid.prototype.addRandomTile = function () {
   if (this.cellsAvailable()) {
     var value = Math.random() < 0.9 ? 2 : 4;
-    //var value = Math.random() < 0.9 ? 256 : 512;
+    //var value = Math.random() < 0.9 ? 8192 : 4096;
     var tile = new Tile(this.randomAvailableCell(), value);
 
     this.insertTile(tile);
@@ -205,7 +205,9 @@ Grid.prototype.move = function (direction) {
 
           // The mighty 2048 tile
           if (merged.value === 2048) {
-            won = true;
+            // you can never win
+          //  won = true;
+            won = false;
           }
         } else {
           //if (debug) {
@@ -569,7 +571,9 @@ Grid.prototype.isWin = function() {
     for (var y=0; y<4; y++) {
       if (self.cellOccupied(this.indexes[x][y])) {
         if (self.cellContent(this.indexes[x][y]).value == 2048) {
-          return true;
+          // you can never win?
+//          return true;
+          return false;
         }
       }
     }

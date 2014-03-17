@@ -18,6 +18,14 @@
   <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=217751578420551";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <div class="container">
     <div class="heading">
       <table>        
@@ -96,8 +104,9 @@
     <div class="sharing">
       <a href="https://twitter.com/share" class="twitter-share-button" data-text="There is life after 2048...Check out 2-bitfinity, a game where you join numbers to score high! #2bitfinity" data-via="grace_tang">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>     
+  <div class="fb-like" data-href="http://mirri66.github.io/2bitfinity/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
-  </div>
 
   <script src="js/animframe_polyfill.js"></script>
   <script src="js/hammer.min.js"></script>

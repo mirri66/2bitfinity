@@ -149,11 +149,11 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   var tweet = document.createElement("a");
   tweet.classList.add("twitter-share-button");
   tweet.setAttribute("href", "https://twitter.com/share");
-  tweet.setAttribute("data-via", "gabrielecirulli");
+  tweet.setAttribute("data-via", "grace_tang");
   tweet.textContent = "Tweet";
 
-  var text = "I scored " + this.score + " points at 2048, a game where you " +
-             "join numbers to score high! #2048game #2048ai";
+  var text = "My highest tile was " + this.score + " on 2bitfinity, a game where you " +
+             "join numbers to score high! #2048game #2bitfinity";
   tweet.setAttribute("data-text", text);
 
   return tweet;

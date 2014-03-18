@@ -32,7 +32,7 @@ function postToFeed(score) {
           picture: 'http://mirri66.github.io/2bitfinity/logo.png',
           name: '2bitfinity',
           caption: 'Life after 2048',
-          description: 'I scored ' + score + ' on 2bitfinity!'
+          description: 'My highest tile was ' + score + ' on 2bitfinity!'
         };
 /*
         function callback(response) {

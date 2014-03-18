@@ -138,6 +138,7 @@ HTMLActuator.prototype.message = function (won) {
 
   this.clearContainer(this.sharingContainer);
   this.sharingContainer.appendChild(this.scoreTweetButton());
+  this.sharingContainer.appendChild(this.scoreFBButton());
   twttr.widgets.load();
 };
 
@@ -157,6 +158,16 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("data-text", text);
 
   return tweet;
+};
+
+// facebook
+HTMLActuator.prototype.scoreFBButton = function () {
+  var fb = document.createElement("button");
+  //fb.classList.add("fb-like");
+  fb.setAttribute("onclick", "postToFeed("+ this.score +"); return false;");
+  fb.setAttribute("class", "uibutton confirm");
+  fb.innerHTML = "Post to Facebook";
+  return fb;
 };
 
 

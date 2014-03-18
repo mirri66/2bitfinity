@@ -5,6 +5,7 @@
   <title>2-bitfinity, and beyond!</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/fb-buttons.css" rel="stylesheet" type="text/css">
   <link href="style/ai.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -22,13 +23,14 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<!--script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=217751578420551";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script-->
+<script type="text/javascript" src="js/fb.js"></script>
   <div class="container">
     <div class="heading">
       <table>        
@@ -108,14 +110,16 @@
       <a href="https://twitter.com/share" class="twitter-share-button" data-text="There is life after 2048... 2bitfinity - join numbers to score high with no limit! #2bitfinity" data-via="grace_tang">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>     
-  <div class="fb-like" data-href="http://mirri66.github.io/2bitfinity/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+  <div class="fb-like" href="http://mirri66.github.io/2bitfinity/" data-href="http://mirri66.github.io/2bitfinity/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
 
   <script src="js/animframe_polyfill.js"></script>
+  <script src="js/fb.js"></script>
   <script src="js/hammer.min.js"></script>
   <script src="js/keyboard_input_manager.js"></script>
   <script src="js/html_actuator.js"></script>
   <script src="js/grid.js"></script>
+
   <script src="js/tile.js"></script>
   <script src="js/ai.js"></script>
   <script src="js/game_manager.js"></script>

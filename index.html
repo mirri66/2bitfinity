@@ -44,7 +44,7 @@
             </div>
           </td>
         </tr>
-        <tr><p>Join the numbers and see how far you can go!</p></tr>
+        <tr><p>Join the numbers and see how far you can go! <br>Just like 2048, except there is <strong>NO LIMIT</strong>.</p></tr>
       </table>
     </div>
 
@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <div class="grid-container">
+      <div class="grid-container" id="thegrid">
         <div class="grid-row">
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
@@ -102,6 +102,8 @@
     <p class="game-explanation">
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>. There is <strong>no limit</strong> to how high you can go!
     </p>
+
+
     <hr>
     <p>
     Modified by <a href="https://github.com/mirri66" target="_blank">mirri66</a> from the AI solver by <a href="https://github.com/ov3y/2048-AI">Matt Overlan</a> for the game 2048 by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli</a>, which was in turn based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
@@ -120,6 +122,8 @@
   <script src="js/html_actuator.js"></script>
   <script src="js/grid.js"></script>
 
+  <script src="js/html2canvas.js"></script>
+  <script src="js/base64binary.js"></script>
   <script src="js/tile.js"></script>
   <script src="js/ai.js"></script>
   <script src="js/game_manager.js"></script>

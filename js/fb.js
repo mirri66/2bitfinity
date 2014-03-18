@@ -29,7 +29,8 @@ function postToFeed(score) {
           method: 'feed',
           redirect_uri: 'mirri66.github.io/2bitfinity',
           link: 'http://mirri66.github.io/2bitfinity/',
-          picture: 'http://mirri66.github.io/2bitfinity/logo.png',
+          //picture: 'http://mirri66.github.io/2bitfinity/logo.png',
+          picture: screenshot(),
           name: '2bitfinity',
           caption: 'Life after 2048',
           description: 'My highest tile was ' + score + ' on 2bitfinity!'
@@ -47,6 +48,22 @@ function postToFeed(score) {
           }
         }
         FB.ui(obj, callback);
+}
+
+
+function screenshot(){
+
+  var grid = document.getElementById('thegrid') 
+  html2canvas(grid, {
+    onrendered: function(canvas) {
+      // canvas is the final rendered <canvas> element
+      var data = canvas.toDataURL("image/png");
+      var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
+      var decodedPng = Base64Binary.decode(encodedPng);
+      return decodedPng;
+    }
+});
+
 }
 
 

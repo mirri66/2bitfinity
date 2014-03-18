@@ -164,7 +164,6 @@ HTMLActuator.prototype.scoreTweetButton = function () {
 HTMLActuator.prototype.scoreFBButton = function () {
   var fb = document.createElement("button");
   fb.setAttribute("onclick", "postToFeed("+ this.score +"); return false;");
- // fb.setAttribute("onclick", "postToFeed(); return false;");
   fb.setAttribute("class", "uibutton confirm");
   fb.innerHTML = "Post to Facebook";
   return fb;

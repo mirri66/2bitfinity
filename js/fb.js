@@ -4,8 +4,9 @@
     FB.init({
       appId      : '217751578420551', // App ID
       //channelUrl : '//www.stanford.edu/~gstang/nalini/channel.html', // Channel File
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
+      //status     : true, // check login status
+      status     : false, // check login status
+      //cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
 }
@@ -13,9 +14,9 @@
  // Load the SDK Asynchronously
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
+  if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js";
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=217751578420551";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -40,9 +41,9 @@ function postToFeed() {
 */
         function callback(response) {
           if (response && response.post_id) {
-            alert('Post was published.');
+            //alert('Post was published.');
           } else {
-            alert('Post was not published.');
+            //alert('Post was not published.');
           }
         }
         FB.ui(obj, callback);

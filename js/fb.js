@@ -60,7 +60,8 @@ function screenshot(){
       var data = canvas.toDataURL("image/png");
       var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
       var decodedPng = Base64Binary.decode(encodedPng);
-      return decodedPng;
+    //  return decodedPng;
+      return data;
     }
 });
 

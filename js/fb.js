@@ -21,8 +21,8 @@
 }(document, 'script', 'facebook-jssdk'));
 
 
-//function postToFeed(score) {
-function postToFeed() {
+function postToFeed(score) {
+//function postToFeed() {
         //var score = Math.pow(2,grid.maxValue());
         // calling the API ...
         var obj = {
@@ -32,7 +32,7 @@ function postToFeed() {
           picture: 'http://mirri66.github.io/2bitfinity/logo.png',
           name: '2bitfinity',
           caption: 'Life after 2048',
-          description: '2bitfinity is 2048 with no limit to how high you can go!'
+          description: 'I scored ' + score + ' on 2bitfinity!'
         };
 /*
         function callback(response) {

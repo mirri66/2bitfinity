@@ -27,7 +27,7 @@ function postToFeed() {
         // calling the API ...
         var obj = {
           method: 'feed',
-          redirect_uri: 'http://mirri66.github.io/2bitfinity/',
+          redirect_uri: 'mirri66.github.io/2bitfinity',
           link: 'http://mirri66.github.io/2bitfinity/',
           picture: 'http://mirri66.github.io/2bitfinity/logo.png',
           name: '2bitfinity',
